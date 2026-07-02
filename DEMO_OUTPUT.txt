@@ -1,0 +1,29 @@
+==================================================================
+SUBJECT unit-2BR-110  (illustrative currency units CU; attack=True)
+==================================================================
+    SC  value=   CU 2.079M  reliability=0.93
+   Inc  value=   CU 2.078M  reliability=0.6
+  Cost  value=   CU 1.900M  reliability=0.15
+  reconciled = CU 2.063M  in approach range [1.900,2.079]M -> True
+  90% conformal = [1.955,2.171]M  (high)
+
+  citation invariant: anchoring=True entailment=True  (overall PASS)
+  selection audit (T6): FLAGGED (used 4/8 eligible comps; omitted 4; value impact 0.9%)
+
+  VERIFY (ledger-only): chain=True citation=True selection=False tamper=none reproduced=True -> REJECTED
+
+  NOTE: the cherry-picked valuation passes citation+NE+reproducibility but is REJECTED by the selection audit (T6).
+
+
+### entailment attack
+  ENTAILMENT ATTACK (anchoring alone would pass both):
+    altered number (+8%): entailment_ok=False -> REJECTED
+    mislabeled citation : entailment_ok=False -> REJECTED
+
+### tamper
+  TAMPER comp:c1: tampered=['comp:c1'] -> REJECTED (tamper detected)
+
+### conformal coverage
+nominal coverage 1-alpha      = 0.90
+empirical coverage (exchangeable) = 0.925   (q = CU 0.042M)
+empirical coverage (+5% drift)    = 0.491
