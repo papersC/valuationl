@@ -1,3 +1,6 @@
+# raw open-data downloads (re-creatable via realdata_src/download_nyc.sh)
+realdata_src/*.xlsx
+realdata_src/*.parquet
+results/_smoke_*.json
 __pycache__/
 *.pyc
-.pytest_cache/

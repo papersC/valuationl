@@ -68,6 +68,10 @@ class IncomeAgent:
     def estimate(self, stores: EvidenceStores, subject_attrs: dict) -> Estimate:
         leases = [e for e in stores.leases.leases(subject_attrs["dwelling_type"])
                   if "annual_rent" in e.payload]
+        if not leases:
+            # income approach is n/a without rental evidence (reliability 0 ->
+            # excluded from reconciliation, so a market with no rents blends to SC)
+            return Estimate("Inc", 0.0, (0.0, 0.0), 0.0, [], [])
         yield_ev = next((e for e in stores.leases.all() if "gross_yield" in e.payload), None)
         rents = np.array([e.payload["annual_rent"] for e in leases], dtype=float)
         market_rent = float(np.median(rents)) if len(rents) else 0.0

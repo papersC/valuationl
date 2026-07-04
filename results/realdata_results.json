@@ -1,0 +1,319 @@
+{
+  "dataset": {
+    "source": "NYC DOF annualized residential sales (open data)",
+    "note": "Dubai DLD open data was requested but is gated behind a JS-only portal / registered API and could not be fetched autonomously; the source-agnostic loader accepts a DLD CSV drop-in. Income and cost approaches are n/a for this feed (no rents / no replacement-cost fields), so the sales-comparison estimator carries the valuation.",
+    "files": [
+      {
+        "name": "nyc_2019_brooklyn.xlsx",
+        "sha256": "ea9cf67fe20909d6ce0c81c652fa2f53e08136de0a612d097148ae6ca83947d7",
+        "rows_raw": 23276
+      },
+      {
+        "name": "nyc_2019_manhattan.xlsx",
+        "sha256": "3d3b98bc283cd2582d3eecdee170eacc0e79f9e729b289dcb9f664a7f39f9f2f",
+        "rows_raw": 17583
+      },
+      {
+        "name": "nyc_2019_queens.xlsx",
+        "sha256": "beaa9387b1d9f30d34b7e545a14d2da0110b8e65874496faa2b2f4534498b981",
+        "rows_raw": 26421
+      },
+      {
+        "name": "nyc_2020_brooklyn.xlsx",
+        "sha256": "9be181f09739b162f1a60c4292a582edeb4c933eb9bf2882be2b3aed307b15e1",
+        "rows_raw": 19900
+      },
+      {
+        "name": "nyc_2020_manhattan.xlsx",
+        "sha256": "f06abc04798cc6b2c6000937a1741e9bab911dc065e6d91223ca1f04a1e2af4d",
+        "rows_raw": 12881
+      },
+      {
+        "name": "nyc_2020_queens.xlsx",
+        "sha256": "e98653761fed8a1029edc24b77d28e33856c1a2ac0b94cdacd4113313cacfd8a",
+        "rows_raw": 21702
+      },
+      {
+        "name": "nyc_2021_brooklyn.xlsx",
+        "sha256": "8932bb27c39747e86625e29104f2a8db2cce10cf3f362448a12b5253a7c48186",
+        "rows_raw": 28966
+      },
+      {
+        "name": "nyc_2021_manhattan.xlsx",
+        "sha256": "473c79e4b53e7792ea63f3ed0fe3bf2e1059fe7d805c711b57dc6ff646045302",
+        "rows_raw": 22757
+      },
+      {
+        "name": "nyc_2021_queens.xlsx",
+        "sha256": "bbb78253b5c40fb362d0d5998b470d83442d6d4f7dc817079b9bdc0089f26639",
+        "rows_raw": 29813
+      },
+      {
+        "name": "nyc_2022_brooklyn.xlsx",
+        "sha256": "8c492456dd8f9c8a6e189c91a3df95029a75e6f9a57cb9a1f672617ab4335009",
+        "rows_raw": 26856
+      },
+      {
+        "name": "nyc_2022_manhattan.xlsx",
+        "sha256": "b7250fa26913cd4950f4d1cf3d4fa2ad8447f352f7b23f3ceab4bbf598a99288",
+        "rows_raw": 21788
+      },
+      {
+        "name": "nyc_2022_queens.xlsx",
+        "sha256": "370f3a2c37fdbb63231a5d87e3b72e3495cc78e53ef0edcc6e1038163aba4d82",
+        "rows_raw": 28841
+      },
+      {
+        "name": "nyc_2023_brooklyn.xlsx",
+        "sha256": "a96b0f9a4417e549e63080e2186f91a19e751e10ef03833d92e10245c8715129",
+        "rows_raw": 21636
+      },
+      {
+        "name": "nyc_2023_manhattan.xlsx",
+        "sha256": "fba9da2ebf2f71dc9f25d04c3d74787ea200517cd5d6e9620b6c6b5cadb3c766",
+        "rows_raw": 17010
+      },
+      {
+        "name": "nyc_2023_queens.xlsx",
+        "sha256": "920965914abdbdb163abaa2dfc9a630b79df48def3bb69c1ba1b30b024c3a594",
+        "rows_raw": 24257
+      },
+      {
+        "name": "nyc_2024_brooklyn.xlsx",
+        "sha256": "89dcea93331548d7798e2b57808633e581a5cc6e20a9ccac2c14ed0e79c70ab4",
+        "rows_raw": 21995
+      },
+      {
+        "name": "nyc_2024_manhattan.xlsx",
+        "sha256": "ad56ec6e2139cd6b3873b296ea78af41f88448cdac844aabcfb9fdbe711981db",
+        "rows_raw": 17380
+      },
+      {
+        "name": "nyc_2024_queens.xlsx",
+        "sha256": "2a4dd2e74b663a5326463a1caa60b69c8a88164600e2c62f2992121a61a128b4",
+        "rows_raw": 25004
+      }
+    ],
+    "filter_counts": {
+      "raw_rows": 408066,
+      "residential_category": 260813,
+      "has_core_fields": 185907,
+      "price_ge_100k": 103490,
+      "gross_sqft_sane": 87554,
+      "unit_price_sane": 87376,
+      "year_built_sane": 87376,
+      "resale_proxy": 87084,
+      "deduped": 87077
+    },
+    "n_clean": 87077,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "boroughs": [
+      "1",
+      "3",
+      "4"
+    ],
+    "segments": 9,
+    "price_median": 870000.0,
+    "unit_price_median": 507.5187969924812
+  },
+  "point_accuracy_walkforward": {
+    "n_test": 12924,
+    "mdape": 0.1580065300120574,
+    "within_10pct": 0.32366140513772823,
+    "cod": 28.905481728773246,
+    "prd": 1.1442284430211442,
+    "by_stratum": [
+      {
+        "stratum": 1,
+        "n": 4308,
+        "price_lo": 100000.0,
+        "price_hi": 788000.0,
+        "mdape": 0.16625643992300393,
+        "cod": 42.12303165586341,
+        "prd": 1.1368365036313786
+      },
+      {
+        "stratum": 2,
+        "n": 4308,
+        "price_lo": 788888.0,
+        "price_hi": 1160000.0,
+        "mdape": 0.12715749399103193,
+        "cod": 15.812787002049783,
+        "prd": 1.000913764734252
+      },
+      {
+        "stratum": 3,
+        "n": 4308,
+        "price_lo": 1160000.0,
+        "price_hi": 38250000.0,
+        "mdape": 0.1892686425951594,
+        "cod": 19.186391258611852,
+        "prd": 1.0311936756363378
+      }
+    ],
+    "by_quarter": [
+      {
+        "quarter": "2024Q1",
+        "n": 2875,
+        "mdape": 0.15891880794372318,
+        "within_10pct": 0.3269565217391304,
+        "cod": 30.399625104381588,
+        "prd": 1.1661432471831896
+      },
+      {
+        "quarter": "2024Q2",
+        "n": 3300,
+        "mdape": 0.16632080088129758,
+        "within_10pct": 0.30454545454545456,
+        "cod": 29.972422268598027,
+        "prd": 1.1465971722054795
+      },
+      {
+        "quarter": "2024Q3",
+        "n": 3354,
+        "mdape": 0.14916382104833326,
+        "within_10pct": 0.3366129994036971,
+        "cod": 28.32102747862737,
+        "prd": 1.1346062430780466
+      },
+      {
+        "quarter": "2024Q4",
+        "n": 3395,
+        "mdape": 0.15648891114433638,
+        "within_10pct": 0.32665684830633285,
+        "cod": 26.884377896129422,
+        "prd": 1.1322988072984836
+      }
+    ]
+  },
+  "interval_calibration": {
+    "nominal": 0.9,
+    "cal_year": 2023,
+    "test_year": 2024,
+    "n_cal": 12437,
+    "n_test": 12924,
+    "half_width_log": 0.4826,
+    "coverage": 0.8993345713401424
+  },
+  "drift": [
+    {
+      "calibrate_year": 2020,
+      "test_year": 2021,
+      "n_cal": 12088,
+      "n_test": 17645,
+      "coverage": 0.8976480589402097
+    },
+    {
+      "calibrate_year": 2021,
+      "test_year": 2022,
+      "n_cal": 17645,
+      "n_test": 16200,
+      "coverage": 0.8708641975308642
+    },
+    {
+      "calibrate_year": 2022,
+      "test_year": 2023,
+      "n_cal": 16200,
+      "n_test": 12437,
+      "coverage": 0.8966792634879794
+    },
+    {
+      "calibrate_year": 2023,
+      "test_year": 2024,
+      "n_cal": 12437,
+      "n_test": 12924,
+      "coverage": 0.8993345713401424
+    }
+  ],
+  "targets_vs_achieved": {
+    "mdape": {
+      "target": "<= 0.07",
+      "achieved": 0.158,
+      "met": false
+    },
+    "within_10pct": {
+      "target": ">= 0.70",
+      "achieved": 0.3237,
+      "met": false
+    },
+    "cod": {
+      "target": "<= 15",
+      "achieved": 28.91,
+      "met": false
+    },
+    "prd": {
+      "target": "0.98-1.03",
+      "achieved": 1.1442,
+      "met": false
+    },
+    "coverage_at_90": {
+      "target": "0.88-0.92",
+      "achieved": 0.8993,
+      "met": true
+    }
+  },
+  "pipeline_structural": {
+    "n_run": 1000,
+    "skipped_no_comps": 0,
+    "containment_ok": 1000,
+    "citation_audit_ok": 1000,
+    "selection_audit_ok": 1000,
+    "replay_ok": 1000,
+    "verify_ok": 1000,
+    "all_structural_hold": true
+  },
+  "selection_attack": {
+    "honest_citation_ok": true,
+    "honest_selection_ok": true,
+    "cherry_citation_ok": true,
+    "cherry_selection_flagged": true,
+    "cherry_value_impact": 0.3884
+  },
+  "audit_latency": {
+    "points": [
+      {
+        "n_claims": 4,
+        "ms": 0.9209
+      },
+      {
+        "n_claims": 8,
+        "ms": 1.5619
+      },
+      {
+        "n_claims": 16,
+        "ms": 2.7529
+      },
+      {
+        "n_claims": 24,
+        "ms": 4.1786
+      },
+      {
+        "n_claims": 32,
+        "ms": 4.9754
+      },
+      {
+        "n_claims": 48,
+        "ms": 7.8895
+      },
+      {
+        "n_claims": 64,
+        "ms": 12.4745
+      }
+    ],
+    "ms_per_claim": 0.1926
+  },
+  "config": {
+    "test_year": 2024,
+    "n_pipeline": 1000,
+    "seed": 0,
+    "model": "HistGradientBoostingRegressor(log unit-price)"
+  },
+  "runtime_s": 1007.3
+}
