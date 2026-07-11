@@ -1,0 +1,40 @@
+{
+ "counts": {
+  "sales_rows_raw": 9227879,
+  "unique_transactions": 1318883,
+  "procedure_sell": 501948,
+  "residential_usage": 400446,
+  "dwelling_flat_villa": 347466,
+  "has_core_fields": 347466,
+  "window_2019_2025": 162251,
+  "price_ge_100k_aed": 161533,
+  "gross_sqft_sane": 161317,
+  "unit_price_sane": 161213,
+  "deduped": 157839
+ },
+ "n_clean": 157839,
+ "years": [
+  2019,
+  2020,
+  2021,
+  2022,
+  2023,
+  2024,
+  2025
+ ],
+ "segments": 96,
+ "areas": 68,
+ "projects": 113306,
+ "flat_share": 0.9037183459094393,
+ "price_median_aed": 1100000.0,
+ "unit_price_median_aed_sqft": 1104.1554964005531,
+ "rows_by_year": {
+  "2019": 7682,
+  "2020": 8080,
+  "2021": 14913,
+  "2022": 21628,
+  "2023": 29432,
+  "2024": 36623,
+  "2025": 39481
+ }
+}

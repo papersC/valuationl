@@ -73,6 +73,14 @@ def _expected_value(claim: Claim, ledger: Ledger, subject_attrs: dict):
             return None, "cost claim cites no cost evidence"
         p = _payload(ledger, cost[0])
         return float(p["land_value"] + p["replacement_cost"] * (1.0 - p["depreciation"])), ""
+    if claim.kind == "Idx":
+        if not idx:
+            return None, "index claim cites no index evidence"
+        p = _payload(ledger, idx[0])
+        if "level_unit_price" not in p:
+            return None, "index evidence missing level"
+        return float(p["level_unit_price"] * (1.0 + p["trailing_quarter_growth"])
+                     * subject_attrs["built_up_area"]), ""
     if claim.kind == "Recon":
         return claim.value, ""  # reconciliation value is checked by NE, not re-derived here
     return None, f"unknown claim kind {claim.kind}"

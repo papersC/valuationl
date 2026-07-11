@@ -1,7 +1,7 @@
 """Run the audit pipeline on ONE real subject with real comparable evidence.
 
-Income and cost approaches are n/a for this market (the NYC annualized-sales
-feed carries neither rents nor replacement-cost fields), so only the
+Income and cost approaches are n/a for this market (the open registry feed
+carries neither rents nor replacement-cost fields), so only the
 sales-comparison estimator is active. The SC value uses the paper's exact
 deterministic formula -- median time-adjusted comparable unit price times the
 subject area -- so the auditor's structured-entailment recomputation matches

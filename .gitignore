@@ -4,3 +4,7 @@ realdata_src/*.parquet
 results/_smoke_*.json
 __pycache__/
 *.pyc
+
+# large derived artifacts (re-creatable from the committed scripts)
+realdata_src/dubai/*.pkl
+fabric/certs.json

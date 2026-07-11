@@ -22,7 +22,10 @@ import numpy as np
 import pandas as pd
 from sklearn.ensemble import HistGradientBoostingRegressor
 
-BOROUGHS = ["1", "2", "3", "4", "5"]           # NYC borough codes
+# Categorical one-hot levels default to the NYC codes; fit_hedonic derives the
+# actual levels from the training frame, so any market (e.g. Dubai DLD, where
+# borough is a single tier and category is Flat/Villa) plugs in unchanged.
+BOROUGHS = ["1", "2", "3", "4", "5"]           # NYC borough codes (default)
 CATEGORIES = ["01", "02", "03", "04", "12", "13", "15"]
 
 NUM_BASE = ["log_gross_sqft", "log_land_sqft", "age", "res_units", "time_idx",
@@ -33,7 +36,10 @@ def _base_period(df: pd.DataFrame) -> pd.Period:
     return pd.PeriodIndex(df["quarter"], freq="Q").min()
 
 
-def _features(df: pd.DataFrame, base_period, nbhd_te: dict, zip_te: dict, global_te: float):
+def _features(df: pd.DataFrame, base_period, nbhd_te: dict, zip_te: dict, global_te: float,
+              boroughs=None, categories=None):
+    boroughs = BOROUGHS if boroughs is None else boroughs
+    categories = CATEGORIES if categories is None else categories
     d = pd.DataFrame(index=df.index)
     d["log_gross_sqft"] = np.log(df["gross_sqft"].clip(lower=1).to_numpy(float))
     d["log_land_sqft"] = np.log(df["land_sqft"].clip(lower=0).to_numpy(float) + 1.0)
@@ -43,15 +49,17 @@ def _features(df: pd.DataFrame, base_period, nbhd_te: dict, zip_te: dict, global
     d["time_idx"] = np.array([(p - base_period).n for p in q], dtype=float)
     d["nbhd_te"] = df["neighborhood"].map(nbhd_te).fillna(global_te).to_numpy(float)
     d["zip_te"] = df["zip"].map(zip_te).fillna(global_te).to_numpy(float)
-    for b in BOROUGHS:
+    for b in boroughs:
         d[f"boro_{b}"] = (df["borough"].astype(str) == b).astype(float).to_numpy()
-    for c in CATEGORIES:
+    for c in categories:
         d[f"cat_{c}"] = (df["category"].astype(str) == c).astype(float).to_numpy()
     return d
 
 
-def _columns():
-    return NUM_BASE + [f"boro_{b}" for b in BOROUGHS] + [f"cat_{c}" for c in CATEGORIES]
+def _columns(boroughs=None, categories=None):
+    boroughs = BOROUGHS if boroughs is None else boroughs
+    categories = CATEGORIES if categories is None else categories
+    return NUM_BASE + [f"boro_{b}" for b in boroughs] + [f"cat_{c}" for c in categories]
 
 
 @dataclass
@@ -61,10 +69,13 @@ class HedonicModel:
     nbhd_te: dict
     zip_te: dict
     global_te: float
+    boroughs: list = None
+    categories: list = None
 
     def _X(self, df):
         return _features(df, self.base_period, self.nbhd_te, self.zip_te,
-                         self.global_te)[_columns()]
+                         self.global_te, self.boroughs,
+                         self.categories)[_columns(self.boroughs, self.categories)]
 
     def predict_unit_price(self, df):
         return np.exp(self.model.predict(self._X(df)))
@@ -87,7 +98,10 @@ def fit_hedonic(train: pd.DataFrame, seed: int = 0) -> HedonicModel:
     nbhd_te = _te(train["neighborhood"], 20.0)
     zip_te = _te(train["zip"], 15.0)
 
-    X = _features(train, base, nbhd_te, zip_te, global_te)[_columns()]
+    boroughs = sorted(train["borough"].astype(str).unique().tolist())
+    categories = sorted(train["category"].astype(str).unique().tolist())
+    X = _features(train, base, nbhd_te, zip_te, global_te,
+                  boroughs, categories)[_columns(boroughs, categories)]
     y = log_up
     model = HistGradientBoostingRegressor(
         loss="squared_error", max_iter=400, learning_rate=0.05,
@@ -96,4 +110,5 @@ def fit_hedonic(train: pd.DataFrame, seed: int = 0) -> HedonicModel:
     )
     model.fit(X, y)
     return HedonicModel(model=model, base_period=base, nbhd_te=nbhd_te,
-                        zip_te=zip_te, global_te=global_te)
+                        zip_te=zip_te, global_te=global_te,
+                        boroughs=boroughs, categories=categories)

@@ -47,6 +47,13 @@ def build_narrative(estimates: list[Estimate], rec: Reconciled) -> list[Claim]:
                   f"retained at low weight as an indicative check."),
             cites=list(e.evidence_ids), kind="Cost", value=e.value,
         ))
+    if "Idx" in by and by["Idx"].reliability > 0:
+        e = by["Idx"]
+        claims.append(Claim(
+            text=(f"The segment price index implies an index-based value of "
+                  f"CU {e.value/1e6:.2f}M, independent of the comparable selection."),
+            cites=list(e.evidence_ids), kind="Idx", value=e.value,
+        ))
 
     union: list[str] = []
     for e in estimates:

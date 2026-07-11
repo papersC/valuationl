@@ -1,0 +1,500 @@
+{
+ "summary": {
+  "nli_model": "MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli",
+  "llm_model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "decoding": "greedy",
+  "n_appraisals": 40,
+  "n_claims": 84,
+  "tau": 0.5,
+  "entailment_rate": 0.7738095238095238,
+  "mean_entail_prob": 0.7742046855744862,
+  "adversarial_mean_entail_prob": 0.000596541166305542,
+  "adversarial_admitted_rate": 0.0
+ },
+ "appraisals": [
+  {
+   "sid": "sale:125340",
+   "segment": "WADI AL SAFA 2|Flat",
+   "value": 243036.32332179864,
+   "narrative": "The subject property in WADI AL SAFA 2, with a built-up area of 398 square feet, has been valued at an adjusted price of AED 0.24 million after accounting for a time adjustment of -17.8%. The ninety percent valuation range for this property falls between AED 0.09 million and AED 0.39 million. Given that no rental or replacement-cost information is available for this subject, the valuation reflects its current market value based on comparable sales within the same market segment.",
+   "n_claims": 2,
+   "claim_entail_probs": [
+    0.99755859375,
+    0.9970703125
+   ],
+   "adversarial_entail_prob": 0.0005078315734863281
+  },
+  {
+   "sid": "sale:145811",
+   "segment": "AL BARSHA SOUTH FOURTH|Flat",
+   "value": 639552.2683217488,
+   "narrative": "The subject property in AL BARSHA SOUTH FOURTH has been valued at an estimated AED 0.64 million, with a ninety percent valuation range of AED 0.37 to 0.91 million. This valuation takes into account comparable sales from the market segment, adjusted by a time adjustment of +0.5 percent. The absence of rental or replacement-cost data prevents further refinement of the valuation estimate.",
+   "n_claims": 2,
+   "claim_entail_probs": [
+    0.99072265625,
+    0.98974609375
+   ],
+   "adversarial_entail_prob": 0.0004992485046386719
+  },
+  {
+   "sid": "sale:143108",
+   "segment": "AL THANAYAH FOURTH|Villa",
+   "value": 4248838.940165846,
+   "narrative": "The subject villa in AL THANAYAH FOURTH has been valued at AED 4.25 million, representing a ninety percent valuation range of AED 2.90 to 5.60 million. The comparable sales data indicates that the subject's market value falls within the higher end of the range due to its unique location and architectural style. The time adjustment to the valuation date does not significantly impact the overall assessment as it is minimal (-0.0 percent).",
+   "n_claims": 2,
+   "claim_entail_probs": [
+    0.990234375,
+    0.0235137939453125
+   ],
+   "adversarial_entail_prob": 0.00042438507080078125
+  },
+  {
+   "sid": "sale:123386",
+   "segment": "AL BARSHA SOUTH FOURTH|Flat",
+   "value": 871405.6130571855,
+   "narrative": "The subject property in AL BARSHA SOUTH FOURTH has been valued at an adjusted price of AED 0.87 million, reflecting a market segment that aligns with comparable units priced between AED 842.0 and AED 1604.0 per square foot over the past year. The ninety percent valuation range narrows down the potential purchase price to approximately AED 0.60 to 1.14 million, considering the time adjustment applied to the valuation date. Given the lack of rental or replacement-cost data, the valuation reflects the current market conditions without additional adjustments.",
+   "n_claims": 2,
+   "claim_entail_probs": [
+    0.93896484375,
+    0.97998046875
+   ],
+   "adversarial_entail_prob": 0.0005359649658203125
+  },
+  {
+   "sid": "sale:134627",
+   "segment": "MADINAT AL MATAAR|Flat",
+   "value": 787558.8022914066,
+   "narrative": "The reconciled value of the subject property at MADINAT AL MATAAR is estimated at AED 0.79 million, with a ninety percent valuation range of AED 0.69 to 0.89 million. This estimate accounts for market conditions and recent adjustments in comparable sales data, reflecting an increase of approximately 7.8% from the most recent comparable sale price.",
+   "n_claims": 2,
+   "claim_entail_probs": [
+    0.99658203125,
+    0.83837890625
+   ],
+   "adversarial_entail_prob": 0.000728607177734375
+  },
+  {
+   "sid": "sale:134746",
+   "segment": "MARSA DUBAI|Flat",
+   "value": 1917579.7999240872,
+   "narrative": "The subject flat in Marsa Dubai has been valued at AED 1.92 million, representing a 7.8% increase from its comparable sales over the past year. The ninety percent valuation range indicates that the fair market value of the subject property could be between AED 0.16 million and AED 3.68 million. Given the lack of rental or replacement-cost data, the valuation is based solely on recent comparable sales within the same market segment.",
+   "n_claims": 2,
+   "claim_entail_probs": [
+    0.318359375,
+    0.87060546875
+   ],
+   "adversarial_entail_prob": 0.0006937980651855469
+  },
+  {
+   "sid": "sale:148175",
+   "segment": "AL HEBIAH FIRST|Flat",
+   "value": 489053.3113227786,
+   "narrative": "The subject property in AL HEBIAH FIRST has been valued at an estimated AED 0.49 million, with a ninety percent valuation range of AED 0.42 to 0.56 million. This valuation reflects adjustments for market conditions over the past eight months, which have resulted in a slight increase in the subject's value compared to comparable units sold within the last year. The lack of rental or replacement-cost data makes it challenging to provide more detailed insights into the subject's current market position.",
+   "n_claims": 1,
+   "claim_entail_probs": [
+    0.9892578125
+   ],
+   "adversarial_entail_prob": 0.0004353523254394531
+  },
+  {
+   "sid": "sale:153206",
+   "segment": "AL BARSHA SOUTH FOURTH|Flat",
+   "value": 1174716.3868927641,
+   "narrative": "The subject property in AL Barsha South Fourth has been valued at AED 1.17 million, representing a ninety percent valuation range of AED 0.66 to 1.69 million. The reconciliation process indicates that the market conditions have adjusted by approximately -0.5% from the valuation date compared to comparable sales data. This suggests that the current market values these properties within the specified range.",
+   "n_claims": 2,
+   "claim_entail_probs": [
+    0.9892578125,
+    0.99658203125
+   ],
+   "adversarial_entail_prob": 0.0005011558532714844
+  },
+  {
+   "sid": "sale:126321",
+   "segment": "HADAEQ SHEIKH MOHAMMED BIN RASHID|Flat",
+   "value": 1264895.5879966083,
+   "narrative": "The HADAEQ SHEIKH MOHAMMED BIN RASHID flat has been valued at AED 1.26 million, with a ninety percent valuation range of AED 0.69 to 1.84 million. The market data suggests that comparable units in the same segment have sold for an average price of around AED 1,531 per square foot. The time adjustment applied to the valuation date results in a slight decrease of approximately 0.9% from the original purchase date.",
+   "n_claims": 3,
+   "claim_entail_probs": [
+    0.9921875,
+    0.1846923828125,
+    0.93017578125
+   ],
+   "adversarial_entail_prob": 0.0005588531494140625
+  },
+  {
+   "sid": "sale:149013",
+   "segment": "BURJ KHALIFA|Flat",
+   "value": 3698660.376237442,
+   "narrative": "The subject property at Burj Khalifa, Flat, with a built-up area of 1279 square feet, has been valued at an adjusted price of AED 3.70 million. The ninety percent valuation range is from AED 2.31 million to AED 5.09 million, reflecting market conditions and comparable sales data. No rental or replacement-cost information was available for this assessment.",
+   "n_claims": 2,
+   "claim_entail_probs": [
+    0.99755859375,
+    0.02777099609375
+   ],
+   "adversarial_entail_prob": 0.0003173351287841797
+  },
+  {
+   "sid": "sale:120026",
+   "segment": "AL BARSHA SOUTH FOURTH|Flat",
+   "value": 613378.2357334619,
+   "narrative": "The subject property in AL BARSHA SOUTH FOURTH has been valued at an estimated AED 0.61 million, with a ninety percent valuation range of AED 0.42 to 0.80 million. This valuation reflects adjustments for market conditions over the past year, including a time adjustment of +13.7 percent. The comparable sales data used for this valuation include units priced at AED 842.0, 854.0, 1005.0, 1148.0, 1308.0, 1362.0, 1386.0, and 1604.0 per square foot, respectively. No rental or replacement-cost information was",
+   "n_claims": 3,
+   "claim_entail_probs": [
+    0.990234375,
+    0.005336761474609375,
+    0.99560546875
+   ],
+   "adversarial_entail_prob": 0.0005445480346679688
+  },
+  {
+   "sid": "sale:134199",
+   "segment": "AL KHAIRAN FIRST|Flat",
+   "value": 4320696.491610761,
+   "narrative": "The subject property in AL KHAIRAN FIRST has been valued at AED 4.32 million, representing a ninety percent valuation range of AED 2.55 to 6.09 million. The reconciliation process indicates an increase of 2% from comparable sales over the valuation period.",
+   "n_claims": 2,
+   "claim_entail_probs": [
+    0.98974609375,
+    0.99365234375
+   ],
+   "adversarial_entail_prob": 0.00039577484130859375
+  },
+  {
+   "sid": "sale:130741",
+   "segment": "HADAEQ SHEIKH MOHAMMED BIN RASHID|Flat",
+   "value": 719588.2590597654,
+   "narrative": "The HADAEQ SHEIKH MOHAMMED BIN RASHID flat has been valued at an adjusted price of AED 0.72 million, reflecting a ninety percent valuation range from AED 0.45 to 0.99 million. This assessment accounts for market conditions by referencing comparable sales with built-up areas ranging from 385 to 2674 square feet, adjusted for time adjustments to the valuation date. The absence of rental or replacement-cost data necessitates reliance on these comparative figures to determine the fair market value of the subject property.",
+   "n_claims": 2,
+   "claim_entail_probs": [
+    0.99658203125,
+    0.95849609375
+   ],
+   "adversarial_entail_prob": 0.0007967948913574219
+  },
+  {
+   "sid": "sale:150822",
+   "segment": "MARSA DUBAI|Flat",
+   "value": 4693488.03467754,
+   "narrative": "The subject property in Marsa Dubai with a built-up area of 1771 square feet has been valued at AED 4.69 million, representing a ninety percent valuation range from AED 3.14 million to AED 6.25 million. The reconciliation process indicates that the market conditions have slightly adjusted by -0.4% since the valuation date. This valuation reflects the current market dynamics without incorporating any rental data or replacement cost estimates.",
+   "n_claims": 2,
+   "claim_entail_probs": [
+    0.990234375,
+    0.99658203125
+   ],
+   "adversarial_entail_prob": 0.0007023811340332031
+  },
+  {
+   "sid": "sale:130080",
+   "segment": "WARSAN FOURTH|Flat",
+   "value": 486208.39542939916,
+   "narrative": "The subject property at WARSAN FOURTH, with a built-up area of 387 square feet, has been valued at an adjusted price of AED 0.49 million based on comparable sales in the same market segment. The ninety percent valuation range is estimated between AED 0.31 million and AED 0.66 million, reflecting the current market conditions and recent adjustments to the valuation date. No rental data or replacement cost information was available for this assessment.",
+   "n_claims": 2,
+   "claim_entail_probs": [
+    0.98681640625,
+    0.0036220550537109375
+   ],
+   "adversarial_entail_prob": 0.0014829635620117188
+  },
+  {
+   "sid": "sale:122528",
+   "segment": "AL MERKADH|Flat",
+   "value": 640990.3294279412,
+   "narrative": "The subject property, an AL Merkadh flat with a built-up area of 348 square feet, has been valued at AED 0.64 million based on comparable sales in the same market segment. The ninety percent valuation range is from AED 0.47 to 0.81 million, reflecting the current market conditions and adjustments made for time. No rental or replacement-cost data was available for this assessment.",
+   "n_claims": 2,
+   "claim_entail_probs": [
+    0.9873046875,
+    0.007114410400390625
+   ],
+   "adversarial_entail_prob": 0.000514984130859375
+  },
+  {
+   "sid": "sale:148151",
+   "segment": "BUSINESS BAY|Flat",
+   "value": 2282175.7433918393,
+   "narrative": "The business bay flat in question has been valued at AED 2.28 million, representing a ninety percent valuation range of AED 1.27 to 3.29 million. This assessment accounts for a time adjustment of +5.9% from the valuation date, reflecting market conditions that have influenced the comparable sales used in the valuation process. The absence of rental or replacement-cost data necessitates reliance on the historical price trends of similar properties within the same market segment as the subject property.",
+   "n_claims": 2,
+   "claim_entail_probs": [
+    0.9921875,
+    0.007587432861328125
+   ],
+   "adversarial_entail_prob": 0.0004687309265136719
+  },
+  {
+   "sid": "sale:119663",
+   "segment": "BUSINESS BAY|Flat",
+   "value": 1382399.411064366,
+   "narrative": "The business bay flat in question has been valued at AED 1.38 million, representing a ninety percent valuation range of AED 1.01 to 1.75 million. This assessment accounts for a market segment that includes properties similar to the subject being evaluated, with comparable sales ranging from AED 1,380 to AED 2,386 per square foot. The time adjustment applied to the valuation date reflects an increase of approximately 6.1% over the period considered relevant for the valuation process.",
+   "n_claims": 3,
+   "claim_entail_probs": [
+    0.9921875,
+    0.92529296875,
+    0.994140625
+   ],
+   "adversarial_entail_prob": 0.0004138946533203125
+  },
+  {
+   "sid": "sale:149279",
+   "segment": "JABAL ALI FIRST|Flat",
+   "value": 992500.4062193797,
+   "narrative": "The subject property in Jabal Ali First has been valued at an adjusted price of AED 0.99 million, reflecting a 1.9% decrease from its comparable sales over the past year. The ninety percent valuation range narrows down the potential market value between AED 0.73 million and AED 1.25 million, indicating a significant variation based on recent transactions within the same market segment. Given the lack of rental data or replacement cost information, the current valuation reflects the most recent comparable sales as indicative of the subject's fair market value.",
+   "n_claims": 2,
+   "claim_entail_probs": [
+    0.63916015625,
+    0.017974853515625
+   ],
+   "adversarial_entail_prob": 0.000545501708984375
+  },
+  {
+   "sid": "sale:156149",
+   "segment": "MARSA DUBAI|Flat",
+   "value": 2084188.2144873156,
+   "narrative": "The subject flat in Marsa Dubai has been valued at AED 2.08 million, with a ninety percent valuation range of AED 1.39 to 2.77 million. The reconciliation process indicates that the market conditions have slightly adjusted by -0.4% since the valuation date. This slight adjustment does not significantly impact the overall valuation but reflects real-world fluctuations in the local real estate market.",
+   "n_claims": 2,
+   "claim_entail_probs": [
+    0.99169921875,
+    0.99658203125
+   ],
+   "adversarial_entail_prob": 0.0004680156707763672
+  },
+  {
+   "sid": "sale:134776",
+   "segment": "AL KHAIRAN FIRST|Flat",
+   "value": 3774285.225692772,
+   "narrative": "The subject property in AL KHAIRAN FIRST has been valued at AED 3.77 million, representing a ninety percent valuation range of AED 2.23 to 5.32 million. The reconciliation process indicates an increase of 2% from comparable sales over the valuation period.",
+   "n_claims": 2,
+   "claim_entail_probs": [
+    0.98974609375,
+    0.99365234375
+   ],
+   "adversarial_entail_prob": 0.0006933212280273438
+  },
+  {
+   "sid": "sale:156944",
+   "segment": "AL THANYAH FIFTH|Flat",
+   "value": 2209033.475162192,
+   "narrative": "The subject property at AL THANYAH FIFTH, with a built-up area of 1557 square feet, has been valued at an adjusted price of AED 2.21 million. The ninety percent valuation range, after applying a time adjustment of +2.2 percent, falls between AED 1.29 million and AED 3.13 million. Rental or replacement-cost information is not available for this particular subject.",
+   "n_claims": 2,
+   "claim_entail_probs": [
+    0.99755859375,
+    0.99609375
+   ],
+   "adversarial_entail_prob": 0.00041794776916503906
+  },
+  {
+   "sid": "sale:127712",
+   "segment": "AL HEBIAH FIRST|Flat",
+   "value": 1181265.12433447,
+   "narrative": "The subject property at AL HEBIAH FIRST, with a built-up area of 1846 square feet, has been valued at AED 1.18 million after applying a time adjustment of -10.0 percent from its most recent comparable sales data. The ninety percent valuation range for this property falls between AED 0.76 million and AED 1.60 million. Given that no rental or replacement-cost information is available for this subject, the valuation reflects solely on market conditions and comparable sales.",
+   "n_claims": 2,
+   "claim_entail_probs": [
+    0.89599609375,
+    0.99755859375
+   ],
+   "adversarial_entail_prob": 0.0007143020629882812
+  },
+  {
+   "sid": "sale:145621",
+   "segment": "WADI AL SAFA 3|Flat",
+   "value": 958998.2185861509,
+   "narrative": "The subject property in WADI AL SAFA 3, with a built-up area of 1069 square feet, has been valued at an adjusted price of AED 0.96 million. The ninety percent valuation range encompasses values from AED 0.71 million to AED 1.21 million, reflecting market conditions and comparable sales data. No rental income or cost-replacement estimates were available for this assessment.",
+   "n_claims": 2,
+   "claim_entail_probs": [
+    0.99755859375,
+    0.1336669921875
+   ],
+   "adversarial_entail_prob": 0.0007495880126953125
+  },
+  {
+   "sid": "sale:147786",
+   "segment": "JABAL ALI FIRST|Flat",
+   "value": 1815407.3055260233,
+   "narrative": "The subject property in Jabal Ali First has been valued at AED 1.82 million, representing a ninety percent valuation range of AED 1.34 to 2.29 million. The market data suggests that comparable units have sold at average prices ranging from AED 895 to AED 1547 per square foot over the past year. Considering the time adjustment of -1.9%, the current market conditions suggest a more stable and potentially higher value for this flat compared to its historical performance.",
+   "n_claims": 3,
+   "claim_entail_probs": [
+    0.98876953125,
+    0.93701171875,
+    0.00415802001953125
+   ],
+   "adversarial_entail_prob": 0.00046324729919433594
+  },
+  {
+   "sid": "sale:150824",
+   "segment": "AL BARSHA SOUTH FOURTH|Flat",
+   "value": 1699893.1399415482,
+   "narrative": "The subject property in AL BARSHA SOUTH FOURTH has been valued at AED 1.70 million, with a ninety percent valuation range of AED 0.95 to 2.45 million. The reconciliation process indicates that the market conditions have slightly adjusted by -0.5% from the valuation date compared to comparable sales data. This suggests that while there may be slight variations in market values, the overall trend aligns closely with recent transactions in the same area.",
+   "n_claims": 2,
+   "claim_entail_probs": [
+    0.9921875,
+    0.99609375
+   ],
+   "adversarial_entail_prob": 0.0008649826049804688
+  },
+  {
+   "sid": "sale:137702",
+   "segment": "AL BARSHA SOUTH FIFTH|Flat",
+   "value": 1283844.0904814163,
+   "narrative": "The subject property in AL Barsha South Fifth, with a built-up area of 1111 square feet, has been valued at AED 1.28 million after adjusting for market conditions over the past four months (+4.1%). The ninety percent valuation range is from AED 0.63 million to AED 1.94 million, reflecting the current market dynamics and comparable sales data. No rental income or cost-replacement values are available for this assessment.",
+   "n_claims": 2,
+   "claim_entail_probs": [
+    0.33203125,
+    0.0027923583984375
+   ],
+   "adversarial_entail_prob": 0.00048661231994628906
+  },
+  {
+   "sid": "sale:150808",
+   "segment": "MARSA DUBAI|Flat",
+   "value": 2131251.4491103357,
+   "narrative": "The subject flat in Marsa Dubai has been valued at AED 2.13 million, representing a 90% valuation range of AED 1.43 to 2.84 million. The reconciliation process indicates that the current market conditions have resulted in a slight decrease from the comparable sales data by approximately 0.4%. This valuation reflects the current market dynamics without incorporating any rental income or cost-replacement values for the subject property.",
+   "n_claims": 2,
+   "claim_entail_probs": [
+    0.98974609375,
+    0.99658203125
+   ],
+   "adversarial_entail_prob": 0.0003948211669921875
+  },
+  {
+   "sid": "sale:124716",
+   "segment": "BUSINESS BAY|Flat",
+   "value": 1316242.494587864,
+   "narrative": "The business bay flat in question has been valued at AED 1.32 million, representing a ninety percent valuation range of AED 0.97 to 1.67 million. This assessment accounts for a market segment that includes properties similar to the subject being evaluated, with comparable sales ranging from AED 1,380 to AED 2,386 per square foot. The time adjustment applied to the valuation date reflects an increase of approximately 6.1% over the period considered relevant for the valuation process.",
+   "n_claims": 3,
+   "claim_entail_probs": [
+    0.99267578125,
+    0.92333984375,
+    0.99365234375
+   ],
+   "adversarial_entail_prob": 0.0004050731658935547
+  },
+  {
+   "sid": "sale:152328",
+   "segment": "WARSAN FOURTH|Flat",
+   "value": 504381.25954724033,
+   "narrative": "The subject property at WARSAN FOURTH Flat has been valued at AED 0.50 million, representing a ninety percent valuation range of AED 0.42 to 0.59 million. The reconciliation process indicates an increase in market value by +16.9% from the comparable sales data provided. This valuation reflects the current market conditions and does not incorporate any rental income or cost-replacement values due to the lack of such information.",
+   "n_claims": 2,
+   "claim_entail_probs": [
+    0.9873046875,
+    0.98974609375
+   ],
+   "adversarial_entail_prob": 0.00039267539978027344
+  },
+  {
+   "sid": "sale:121067",
+   "segment": "JABAL ALI FIRST|Flat",
+   "value": 629033.8656811141,
+   "narrative": "The subject property in Jabal Ali First has been valued at an adjusted price of AED 0.63 million, representing a 4.6% decrease from its comparable sales over the past year. The ninety percent valuation range is estimated between AED 0.26 million and AED 1.00 million, reflecting the market's current conditions and potential future adjustments. Given the lack of rental or replacement-cost data, the valuation is based solely on the comparable sales figures provided.",
+   "n_claims": 2,
+   "claim_entail_probs": [
+    0.7109375,
+    0.002658843994140625
+   ],
+   "adversarial_entail_prob": 0.0004963874816894531
+  },
+  {
+   "sid": "sale:155886",
+   "segment": "MARSA DUBAI|Flat",
+   "value": 1346293.7419433598,
+   "narrative": "The subject flat in Marsa Dubai has been valued at AED 1.35 million, representing a 90% valuation range of AED 0.90 to 1.79 million. The reconciliation process indicates that the current market conditions have resulted in a slight decrease from the comparable sales data by approximately 0.4%. This valuation reflects the current market dynamics without incorporating any rental income or cost-replacement values for the subject property.",
+   "n_claims": 2,
+   "claim_entail_probs": [
+    0.990234375,
+    0.99609375
+   ],
+   "adversarial_entail_prob": 0.0005078315734863281
+  },
+  {
+   "sid": "sale:126609",
+   "segment": "AL JADAF|Flat",
+   "value": 2161524.9241737938,
+   "narrative": "The subject property in AL JADAF has been valued at AED 2.16 million, representing a 17.9% increase from its comparable sales over the past year. The ninety percent valuation range is estimated between AED 1.30 million and AED 3.03 million, reflecting the market's current conditions and potential future adjustments. No rental data or cost of replacement exists for this particular property, necessitating reliance on comparable sales as the primary basis for valuation.",
+   "n_claims": 2,
+   "claim_entail_probs": [
+    0.256591796875,
+    0.0024871826171875
+   ],
+   "adversarial_entail_prob": 0.0005950927734375
+  },
+  {
+   "sid": "sale:149392",
+   "segment": "AL BARSHA SOUTH FOURTH|Flat",
+   "value": 1156606.8436841855,
+   "narrative": "The subject property located in AL BARSHA SOUTH FOURTH has been valued at AED 1.16 million, with a ninety percent valuation range of AED 0.65 to 1.66 million. The reconciliation process indicates that the market conditions have slightly adjusted by -0.5% from the valuation date compared to comparable sales data. This suggests that while there may be slight variations in market values, the overall trend aligns closely with recent transactions in the same neighborhood.",
+   "n_claims": 2,
+   "claim_entail_probs": [
+    0.9931640625,
+    0.99609375
+   ],
+   "adversarial_entail_prob": 0.0005002021789550781
+  },
+  {
+   "sid": "sale:156316",
+   "segment": "AL KHAIRAN FIRST|Flat",
+   "value": 1723967.0123690455,
+   "narrative": "The subject property in AL KHAIRAN FIRST has been valued at AED 1.72 million, representing a ninety percent valuation range of AED 1.44 to 2.01 million. The reconciliation process indicates an increase of +3.3% from comparable sales over the past three years. This valuation reflects the current market conditions and recent trends observed in similar properties within the same neighborhood.",
+   "n_claims": 2,
+   "claim_entail_probs": [
+    0.9912109375,
+    0.0246124267578125
+   ],
+   "adversarial_entail_prob": 0.00054168701171875
+  },
+  {
+   "sid": "sale:125098",
+   "segment": "AL WARSAN FIRST|Flat",
+   "value": 471463.9100263583,
+   "narrative": "The subject property in AL WARSAN FIRST has been valued at AED 0.47 million, with a ninety percent valuation range of AED 0.27 to 0.67 million. The reconciliation process indicates an increase of 6% from comparable sales over the valuation period.",
+   "n_claims": 2,
+   "claim_entail_probs": [
+    0.99169921875,
+    0.994140625
+   ],
+   "adversarial_entail_prob": 0.0005364418029785156
+  },
+  {
+   "sid": "sale:141717",
+   "segment": "PALM JUMEIRAH|Flat",
+   "value": 5579351.987807043,
+   "narrative": "The subject property in Palm Jumeirah has been valued at AED 5.58 million, with a ninety percent valuation range of AED -2.67 to 13.82 million. The reconciliation process indicates an increase of +1.6% from comparable sales over the past year.",
+   "n_claims": 2,
+   "claim_entail_probs": [
+    0.990234375,
+    0.77880859375
+   ],
+   "adversarial_entail_prob": 0.0008034706115722656
+  },
+  {
+   "sid": "sale:128589",
+   "segment": "AL BARSHA SOUTH FOURTH|Flat",
+   "value": 448523.10975486925,
+   "narrative": "The subject property in AL Barsha South Fourth, with a built-up area of 430 square feet, has been valued at an adjusted price of AED 0.45 million. The ninety percent valuation range, after applying a time adjustment of +2.5 percent, falls between AED 0.23 million and AED 0.66 million. Given that no rental or replacement-cost information is available for this subject, the valuation reflects its current market value based on comparable sales within the same market segment.",
+   "n_claims": 2,
+   "claim_entail_probs": [
+    0.99755859375,
+    0.99560546875
+   ],
+   "adversarial_entail_prob": 0.00048828125
+  },
+  {
+   "sid": "sale:155788",
+   "segment": "AL BARSHA SOUTH FOURTH|Flat",
+   "value": 2587421.0186062315,
+   "narrative": "The subject property located in AL BARSHA SOUTH FOURTH has been valued at AED 2.59 million, with a ninety percent valuation range of AED 1.45 to 3.72 million. The reconciliation process indicates that the market conditions have slightly adjusted by -0.5% from the valuation date compared to comparable sales data. This suggests that while there may be slight variations in market values, the overall trend aligns closely with recent transactions in the same neighborhood.",
+   "n_claims": 2,
+   "claim_entail_probs": [
+    0.99365234375,
+    0.99609375
+   ],
+   "adversarial_entail_prob": 0.0010986328125
+  },
+  {
+   "sid": "sale:136107",
+   "segment": "MARSA DUBAI|Flat",
+   "value": 1489492.950047501,
+   "narrative": "The subject flat in Marsa Dubai has been valued at AED 1.49 million, representing a 7.8% increase from its comparable sales over the past year. The ninety percent valuation range indicates that the fair market value of the subject property lies between AED 0.12 million and AED 2.86 million. Given the lack of rental or replacement-cost data, the valuation is based solely on recent comparable sales within the same market segment.",
+   "n_claims": 2,
+   "claim_entail_probs": [
+    0.2958984375,
+    0.41015625
+   ],
+   "adversarial_entail_prob": 0.0011749267578125
+  }
+ ]
+}

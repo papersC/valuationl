@@ -1,0 +1,154 @@
+{
+  "note": "Referee-revision experiments (M2/M3/M4 + minors). Sibling to the immutable realdata_results.json; same Dubai DLD clean frame.",
+  "test_year": 2025,
+  "seed": 0,
+  "baselines": {
+    "segment_median": {
+      "n_test": 39481,
+      "mdape": 0.24463255813953483,
+      "within_10pct": 0.1944226336718928,
+      "cod": 23.231399989137966,
+      "prd": 1.104955152952741
+    },
+    "index": {
+      "n_test": 39410,
+      "mdape": 0.16098344769978268,
+      "within_10pct": 0.3341030195381883,
+      "cod": 23.075948928250043,
+      "prd": 1.09127349039683,
+      "n_skipped_no_index": 71
+    },
+    "knn": {
+      "n_test": 39481,
+      "mdape": 0.11457650584560644,
+      "within_10pct": 0.45621944732909503,
+      "cod": 19.616812174837015,
+      "prd": 1.0995139694580467,
+      "k": 10
+    },
+    "hedonic": {
+      "n_test": 39481,
+      "mdape": 0.08933630653751713,
+      "within_10pct": 0.5454015855728072,
+      "cod": 14.515232857520738,
+      "prd": 1.061108403846062
+    }
+  },
+  "recalibration": {
+    "nominal": 0.9,
+    "cal_year_base": 2024,
+    "test_year": 2025,
+    "n_train": 81735,
+    "n_test": 39481,
+    "variants": {
+      "annual": {
+        "cal_span": "2024 (4 quarters)",
+        "n_cal": 36623,
+        "half_width_log": 0.3481,
+        "coverage": 0.7772
+      },
+      "half_year": {
+        "cal_span": "2024H2 (2 quarters)",
+        "n_cal": 19479,
+        "half_width_log": 0.3744,
+        "coverage": 0.8128
+      },
+      "quarterly": {
+        "cal_span": "2024Q4 (1 quarter)",
+        "n_cal": 9917,
+        "half_width_log": 0.3953,
+        "coverage": 0.8372
+      },
+      "rolling_quarterly": {
+        "cal_span": "each test quarter on the prior quarter",
+        "n_cal": null,
+        "coverage": 0.8801,
+        "per_quarter": [
+          {
+            "test_quarter": "2025Q1",
+            "cal_quarter": "2024Q4",
+            "coverage": 0.8687
+          },
+          {
+            "test_quarter": "2025Q2",
+            "cal_quarter": "2025Q1",
+            "coverage": 0.8966
+          },
+          {
+            "test_quarter": "2025Q3",
+            "cal_quarter": "2025Q2",
+            "coverage": 0.8947
+          },
+          {
+            "test_quarter": "2025Q4",
+            "cal_quarter": "2025Q3",
+            "coverage": 0.8604
+          }
+        ]
+      }
+    }
+  },
+  "decision_boundary": {
+    "ltv_nominal_pct": 80,
+    "pooled": {
+      "half_width_log": 0.3481,
+      "half_width_pct_up": 41.6,
+      "half_width_pct_dn": 29.4,
+      "ltv_at_lower_bound_pct": 113.3
+    },
+    "by_stratum": [
+      {
+        "stratum": 1,
+        "half_width_log": 0.2852,
+        "price_lo": 100000.0,
+        "price_hi": 850000.0,
+        "half_width_pct_up": 33.0,
+        "half_width_pct_dn": 24.8,
+        "ltv_at_lower_bound_pct": 106.4
+      },
+      {
+        "stratum": 2,
+        "half_width_log": 0.334,
+        "price_lo": 850000.0,
+        "price_hi": 1800000.0,
+        "half_width_pct_up": 39.6,
+        "half_width_pct_dn": 28.4,
+        "ltv_at_lower_bound_pct": 111.7
+      },
+      {
+        "stratum": 3,
+        "half_width_log": 0.4421,
+        "price_lo": 1800000.0,
+        "price_hi": 66500000.0,
+        "half_width_pct_up": 55.6,
+        "half_width_pct_dn": 35.7,
+        "ltv_at_lower_bound_pct": 124.5
+      }
+    ]
+  },
+  "containment_nontrivial": {
+    "n_run": 1000,
+    "skipped": 3,
+    "two_approach_active": 1000,
+    "containment_ok": 1000,
+    "blend_strictly_interior": 999,
+    "approach_gap_median_pct": 4.944,
+    "approach_gap_p90_pct": 17.332,
+    "citation_audit_ok": 1000,
+    "replay_ok": 1000,
+    "verify_ok": 1000,
+    "containment_nontrivial": true,
+    "attack": {
+      "n": 200,
+      "containment_band_honest_median_pct": 5.621,
+      "containment_band_cherry_median_pct": 16.758
+    }
+  },
+  "entailment": {
+    "n_narratives": 1000,
+    "value_bearing_claims_per_narrative": 2,
+    "structured_entailment_ok": 1000,
+    "structured_entailment_rate": 1.0,
+    "neural_nli_gate": "future work (free-text clause; not wired on this feed)"
+  }
+}

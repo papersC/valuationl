@@ -1,0 +1,626 @@
+{
+  "chaincode": "valcert",
+  "channel": "valuation",
+  "commit_latency_ms": {
+    "max": 2197.029,
+    "mean": 2040.8702640000004,
+    "min": 2023.929,
+    "n": 500,
+    "p50": 2038.428,
+    "p95": 2061.327,
+    "p99": 2074.396
+  },
+  "endorsement": "majority (Org1MSP AND Org2MSP)",
+  "footprint": [
+    {
+      "K": 4,
+      "NEvidence": 5,
+      "DigestLen": 64,
+      "OnchainBytes": 195
+    },
+    {
+      "K": 4,
+      "NEvidence": 5,
+      "DigestLen": 64,
+      "OnchainBytes": 195
+    },
+    {
+      "K": 4,
+      "NEvidence": 5,
+      "DigestLen": 64,
+      "OnchainBytes": 195
+    },
+    {
+      "K": 4,
+      "NEvidence": 5,
+      "DigestLen": 64,
+      "OnchainBytes": 195
+    },
+    {
+      "K": 4,
+      "NEvidence": 5,
+      "DigestLen": 64,
+      "OnchainBytes": 195
+    },
+    {
+      "K": 4,
+      "NEvidence": 5,
+      "DigestLen": 64,
+      "OnchainBytes": 195
+    },
+    {
+      "K": 4,
+      "NEvidence": 5,
+      "DigestLen": 64,
+      "OnchainBytes": 195
+    },
+    {
+      "K": 4,
+      "NEvidence": 5,
+      "DigestLen": 64,
+      "OnchainBytes": 195
+    },
+    {
+      "K": 4,
+      "NEvidence": 5,
+      "DigestLen": 64,
+      "OnchainBytes": 195
+    },
+    {
+      "K": 4,
+      "NEvidence": 5,
+      "DigestLen": 64,
+      "OnchainBytes": 195
+    },
+    {
+      "K": 4,
+      "NEvidence": 5,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 4,
+      "NEvidence": 5,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 4,
+      "NEvidence": 5,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 4,
+      "NEvidence": 5,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 4,
+      "NEvidence": 5,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 4,
+      "NEvidence": 5,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 4,
+      "NEvidence": 5,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 4,
+      "NEvidence": 5,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 4,
+      "NEvidence": 5,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 4,
+      "NEvidence": 5,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 8,
+      "NEvidence": 9,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 8,
+      "NEvidence": 9,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 8,
+      "NEvidence": 9,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 8,
+      "NEvidence": 9,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 8,
+      "NEvidence": 9,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 8,
+      "NEvidence": 9,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 8,
+      "NEvidence": 9,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 8,
+      "NEvidence": 9,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 8,
+      "NEvidence": 9,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 8,
+      "NEvidence": 9,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 8,
+      "NEvidence": 9,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 8,
+      "NEvidence": 9,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 8,
+      "NEvidence": 9,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 8,
+      "NEvidence": 9,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 8,
+      "NEvidence": 9,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 8,
+      "NEvidence": 9,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 8,
+      "NEvidence": 9,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 8,
+      "NEvidence": 9,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 8,
+      "NEvidence": 9,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 8,
+      "NEvidence": 9,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 16,
+      "NEvidence": 17,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 16,
+      "NEvidence": 17,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 16,
+      "NEvidence": 17,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 16,
+      "NEvidence": 17,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 16,
+      "NEvidence": 17,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 16,
+      "NEvidence": 17,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 16,
+      "NEvidence": 17,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 16,
+      "NEvidence": 17,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 16,
+      "NEvidence": 17,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 16,
+      "NEvidence": 17,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 16,
+      "NEvidence": 17,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 16,
+      "NEvidence": 17,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 16,
+      "NEvidence": 17,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 16,
+      "NEvidence": 17,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 16,
+      "NEvidence": 17,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 16,
+      "NEvidence": 17,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 16,
+      "NEvidence": 17,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 16,
+      "NEvidence": 17,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 16,
+      "NEvidence": 17,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 16,
+      "NEvidence": 17,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 32,
+      "NEvidence": 33,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 32,
+      "NEvidence": 33,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 32,
+      "NEvidence": 33,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 32,
+      "NEvidence": 33,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 32,
+      "NEvidence": 33,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 32,
+      "NEvidence": 33,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 32,
+      "NEvidence": 33,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 32,
+      "NEvidence": 33,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 32,
+      "NEvidence": 33,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 32,
+      "NEvidence": 33,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 32,
+      "NEvidence": 33,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 32,
+      "NEvidence": 33,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 32,
+      "NEvidence": 33,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 32,
+      "NEvidence": 33,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 32,
+      "NEvidence": 33,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 32,
+      "NEvidence": 33,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 32,
+      "NEvidence": 33,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 32,
+      "NEvidence": 33,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 32,
+      "NEvidence": 33,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 32,
+      "NEvidence": 33,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 64,
+      "NEvidence": 65,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 64,
+      "NEvidence": 65,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 64,
+      "NEvidence": 65,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 64,
+      "NEvidence": 65,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 64,
+      "NEvidence": 65,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 64,
+      "NEvidence": 65,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 64,
+      "NEvidence": 65,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 64,
+      "NEvidence": 65,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 64,
+      "NEvidence": 65,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 64,
+      "NEvidence": 65,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 64,
+      "NEvidence": 65,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 64,
+      "NEvidence": 65,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 64,
+      "NEvidence": 65,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 64,
+      "NEvidence": 65,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 64,
+      "NEvidence": 65,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 64,
+      "NEvidence": 65,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 64,
+      "NEvidence": 65,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 64,
+      "NEvidence": 65,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 64,
+      "NEvidence": 65,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    },
+    {
+      "K": 64,
+      "NEvidence": 65,
+      "DigestLen": 64,
+      "OnchainBytes": 196
+    }
+  ],
+  "integrity": {
+    "reanchor_rejected": true,
+    "verify_correct_digest": "true",
+    "verify_tampered_digest": "false"
+  },
+  "peer_endpoint": "localhost:17051",
+  "run_tag": "run1",
+  "throughput_concurrent_tps": 273.23754097847575,
+  "throughput_concurrent_workers": 16,
+  "throughput_sequential_tps": 0.4899854574523123
+}

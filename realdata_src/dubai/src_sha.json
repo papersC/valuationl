@@ -1,0 +1,5 @@
+{
+ "scheme": "sha256 of concatenated hex sha256 digests of 8 equal byte ranges",
+ "size_bytes": 7705571480,
+ "digest": "5cebd525e2888d96ba0dd940238b1b6f48b757e0c77707dddb25c7d293139757"
+}

@@ -25,7 +25,7 @@ class Adjustment:
 
 @dataclass
 class Estimate:
-    appr: Literal["SC", "Inc", "Cost"]
+    appr: Literal["SC", "Inc", "Cost", "Idx"]
     value: float
     interval: tuple[float, float]
     reliability: float
@@ -69,8 +69,6 @@ class IncomeAgent:
         leases = [e for e in stores.leases.leases(subject_attrs["dwelling_type"])
                   if "annual_rent" in e.payload]
         if not leases:
-            # income approach is n/a without rental evidence (reliability 0 ->
-            # excluded from reconciliation, so a market with no rents blends to SC)
             return Estimate("Inc", 0.0, (0.0, 0.0), 0.0, [], [])
         yield_ev = next((e for e in stores.leases.all() if "gross_yield" in e.payload), None)
         rents = np.array([e.payload["annual_rent"] for e in leases], dtype=float)
@@ -100,6 +98,34 @@ class CostAgent:
         return Estimate("Cost", value, (value - half, value + half), 0.15,
                         [Adjustment("depreciation", p["depreciation"], cost_ev.eid)],
                         [cost_ev.eid])
+
+
+class IndexAgent:
+    """A distinct, index-based estimator (interface I2).
+
+    Values the subject from the segment's published price index rather than from
+    the retrieved comparable subset: the most recent segment index level, carried
+    forward one step by the trailing quarterly growth, times the subject area.
+    It cites only the index record, so it does not move with the comparable
+    selection -- which is why activating it makes the containment rule a
+    non-trivial constraint on a feed where income and cost are n/a: the blend of
+    two genuinely different approaches must still fall between them.
+    """
+    appr = "Idx"
+
+    def estimate(self, stores: EvidenceStores, subject_attrs: dict,
+                 reliability: float = 0.5) -> Estimate:
+        idx = stores.index.latest_growth()
+        if idx is None or "level_unit_price" not in idx.payload:
+            return Estimate("Idx", 0.0, (0.0, 0.0), 0.0, [], [])
+        lvl = float(idx.payload["level_unit_price"])
+        growth = float(idx.payload["trailing_quarter_growth"])
+        size = subject_attrs["built_up_area"]
+        value = float(lvl * (1.0 + growth) * size)
+        half = value * 0.06
+        return Estimate("Idx", value, (value - half, value + half),
+                        round(float(reliability), 2),
+                        [Adjustment("segment_index_level", lvl, idx.eid)], [idx.eid])
 
 
 def run_all_agents(stores: EvidenceStores, subject_attrs: dict,
